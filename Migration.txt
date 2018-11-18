@@ -1,0 +1,12 @@
+#181118
+CREATE TABLE `py_db`.`req_res` (
+  `id` INT AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `req` TEXT(65535) NULL,
+  `res` TEXT(65535) NULL,
+  `created_at` timestamp DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `IDX_CREATED_AT` (`created_at`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;

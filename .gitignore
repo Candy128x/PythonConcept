@@ -1,0 +1,8 @@
+#ignore file Pwd3.txt
+23.txt
+
+#ignore folder venv
+/.idea/*
+/venv/*
+
+#ignore all *.ios file
