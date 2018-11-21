@@ -88,9 +88,34 @@ mycursor = mydb.cursor()
 #     print(x)
 
 ''' prvent sql injection '''
-sql = "SELECT * FROM req_res WHERE name = %h"
-adr = ("Yellow Garden 2", )
-mycursor.execute(sql, adr)
-myresult = mycursor.fetchall()
-for x in myresult:
-  print(x)
+# sql = "SELECT * FROM req_res WHERE name = %h"
+# adr = ("Yellow Garden 2", )
+# mycursor.execute(sql, adr)
+# myresult = mycursor.fetchall()
+# for x in myresult:
+#   print(x)
+
+''' join '''
+# sql = "SELECT \
+#   rr.name AS rr_name, \
+#   rr.res AS rr_req \
+#   FROM req_res as rr \
+#   INNER JOIN products ON rr.name = products.name"
+# mycursor.execute(sql)
+# myresult = mycursor.fetchall()
+# for x in myresult:
+#   print(x)
+
+''' limit '''
+# sql = "SELECT * FROM req_res LIMIT 5"
+# mycursor.execute(sql)
+# myresult = mycursor.fetchall()
+# for x in myresult:
+#   print(x)
+
+''' limit with offset '''
+# sql = "SELECT * FROM req_res LIMIT 5 OFFSET 3"
+# mycursor.execute(sql)
+# myresult = mycursor.fetchall()
+# for x in myresult:
+#   print(x)

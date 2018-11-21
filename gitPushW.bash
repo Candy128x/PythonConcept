@@ -1,8 +1,10 @@
 echo "pingpong"
 
-#git add .
+git status
+
+git add .
 #git add -A
-git add -f .
+#git add -f .
 
 echo Write your commit:
 read cmmt
@@ -13,5 +15,6 @@ git pull origin home
 git push origin home
 #git push -f origin home
 
+git status
 
 $SHELL

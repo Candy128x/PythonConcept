@@ -2,7 +2,10 @@
 23.txt
 
 #ignore folder venv
-/.idea/*
-/venv/*
+.idea/*
+venv/*
 
 #ignore all *.ios file
+#that hide all .idea dir file | .idea dir contain *.iml & *.xml function
+*.iml
+*.xml
