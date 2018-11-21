@@ -69,6 +69,28 @@ mycursor = mydb.cursor()
 
 ''' delete record '''
 # sql = "DELETE FROM req_res WHERE name = 'chuck'"
-# # mycursor.execute(sql)
-# # mydb.commit()
-# # print(mycursor.rowcount, "record(s) deleted")
+# mycursor.execute(sql)
+# mydb.commit()
+# print(mycursor.rowcount, "record(s) deleted")
+
+''' where statment '''
+# sql = "SELECT * FROM req_res WHERE name='Dev'"
+# mycursor.execute(sql)
+# result = mycursor.fetchall()
+# for x in result:
+#     print(x)
+
+''' wildcard characters '''
+# sql = "SELECT * FROM req_res WHERE name LIKE '%de%'"
+# mycursor.execute(sql)
+# result = mycursor.fetchall()
+# for x in result:
+#     print(x)
+
+''' prvent sql injection '''
+sql = "SELECT * FROM req_res WHERE name = %h"
+adr = ("Yellow Garden 2", )
+mycursor.execute(sql, adr)
+myresult = mycursor.fetchall()
+for x in myresult:
+  print(x)
